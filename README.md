@@ -94,10 +94,6 @@ Our experiments show that Reinforce-Ada consistently improves sample efficiency 
 
 
 ## 🌍 Environment Setup
-
-
-
-
 1. Create a new environment.
    ```bash
    python -m venv ~/.python/reinforce_ada
@@ -119,12 +115,14 @@ Our experiments show that Reinforce-Ada consistently improves sample efficiency 
    python -m uv pip install vllm==0.10.1
    ```
 
-## 🧪 Experiments Running
+## 🧪 Experiment Running
 1. Prepare the training and test datasets
     ```bash
     bash scripts/prepare_data.py  # adjust pass_rate to 0.125 and 0.313 for hard and easy prompt selection
     ```
 2. Start the training
+
+   The key hyper-parameters from Reinforce-Ada are ``multiround_adaptive_downsampling=True``, ``reinforce_ada_choice=balanced`` and ``global_stat_est=True``.
    ```bash
    bash scripts/run_reinforce_ada.sh  # Chcek this file for more details
    ```
