@@ -58,8 +58,8 @@ reinforce_ada_choice="balance" # "positive_focused" or "balance"
 global_stat_est=True
 
 # Training data
-train_path=/path/to/train.parquet
-test_path=/path/to/test.parquet
+train_path=./data/openr1/train.parquet
+test_path=./data/openr1/test.parquet
 train_files="['$train_path']"
 test_files="['$test_path']"
 

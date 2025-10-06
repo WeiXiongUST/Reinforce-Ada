@@ -33,8 +33,8 @@ clip_ratio_low=0.2
 clip_ratio_high=0.28
 
 # Training data
-train_path="/path/to/train.parquet"
-test_path="/path/to/test.parquet"
+train_path="./data/openr1/train.parquet"
+test_path="./data/openr1/test.parquet"
 train_files="['$train_path']"
 test_files="['$test_path']"
 
