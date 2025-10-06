@@ -129,15 +129,14 @@ Our experiments show that Reinforce-Ada consistently improves sample efficiency 
    - ``reinforce_ada_choice=balanced``: How to balance the positive and negative prompts within a batch, could be one of [balanced, positive-focused].
    - ``global_stat_est=True``: Use global statistics to calculate the mean and std.
 
+   For ``multi_round_adaptive_downsampling``, check [**verl/trainer/ppo/ray_trainer.py**](verl/trainer/ppo/ray_trainer.py)
+   
+   For GRPO with global statistics, check [**verl/trainer/ppo/core_algos.py**](verl/trainer/ppo/core_algos.py)
 
 3. Evaluate
    ```bash
    bash scripts/eval_model.sh  # Chcek this file for more details
    ```
-
-## 💻 Code Navigation
-1. For ``multi_round_adaptive_downsampling``, check [**verl/trainer/ppo/ray_trainer.py**](verl/trainer/ppo/ray_trainer.py)
-2. For GRPO with global statistics, check [**verl/trainer/ppo/core_algos.py**](verl/trainer/ppo/core_algos.py)
 
 
 ## 🙏 Acknowledgement
