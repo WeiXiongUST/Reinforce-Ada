@@ -118,11 +118,13 @@ Our experiments show that Reinforce-Ada consistently improves sample efficiency 
 ## 🧪 Experiment Running
 1. Prepare the training and test datasets
     ```bash
-    bash scripts/prepare_data.py  # adjust pass_rate to 0.125 and 0.313 for hard and easy prompt selection
+    # adjust pass_rate to 0.125 and 0.313 for hard and easy prompt selection
+    bash scripts/prepare_data.py 
     ```
 2. Start the training
    ```bash
-   bash scripts/run_reinforce_ada.sh  # Chcek this file for more details
+   # Chcek this file for more details
+   bash scripts/run_reinforce_ada.sh 
    ```
    The key hyper-parameters from Reinforce-Ada are:
    - ``multiround_adaptive_downsampling=True``: Use adaptive sampling.
@@ -135,7 +137,8 @@ Our experiments show that Reinforce-Ada consistently improves sample efficiency 
 
 3. Evaluate
    ```bash
-   bash scripts/eval_model.sh  # Chcek this file for more details
+   # Chcek this file for more details
+   bash scripts/eval_model.sh
    ```
 
 
