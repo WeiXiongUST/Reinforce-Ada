@@ -54,7 +54,7 @@ clip_ratio_high=0.28
 
 ## Reinforce-Ada setting
 multiround_adaptive_downsampling=True
-reinforce_ada_choice="balance" # "positive_focused" or "balance"
+reinforce_ada_choice="balanced" # "positive_focused" or "balanced"
 global_stat_est=True
 
 # Training data
