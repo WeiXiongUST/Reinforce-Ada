@@ -121,15 +121,15 @@ Our experiments show that Reinforce-Ada consistently improves sample efficiency 
     bash scripts/prepare_data.py  # adjust pass_rate to 0.125 and 0.313 for hard and easy prompt selection
     ```
 2. Start the training
-
+   ```bash
+   bash scripts/run_reinforce_ada.sh  # Chcek this file for more details
+   ```
    The key hyper-parameters from Reinforce-Ada are:
    - ``multiround_adaptive_downsampling=True``: Use adaptive sampling.
    - ``reinforce_ada_choice=balanced``: How to balance the positive and negative prompts, could be one of [balanced, positive-focused].
    - ``global_stat_est=True``: Use global statistics to calculate the mean and std.
-   
-   ```bash
-   bash scripts/run_reinforce_ada.sh  # Chcek this file for more details
-   ```
+
+
 3. Evaluate
    ```bash
    bash scripts/eval_model.sh  # Chcek this file for more details
