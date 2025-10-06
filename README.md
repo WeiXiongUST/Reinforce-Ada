@@ -138,7 +138,7 @@ Our experiments show that Reinforce-Ada consistently improves sample efficiency 
 
 
 ## 🙏 Acknowledgement
-We thanks [verl](https://github.com/volcengine/verl) for providing the awesome training codebase, and [Qwen2.5-Math](https://github.com/QwenLM/Qwen2.5-Math) for its robust grader.
+We thank [verl](https://github.com/volcengine/verl) for providing the awesome training codebase, and [Qwen2.5-Math](https://github.com/QwenLM/Qwen2.5-Math) for its robust grader.
 
 ## 📝 Citation
 If you find our paper and code helpful, feel free to give us a citation.
