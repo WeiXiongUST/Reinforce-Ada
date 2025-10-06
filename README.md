@@ -133,8 +133,8 @@ Our experiments show that Reinforce-Ada consistently improves sample efficiency 
    ```
 
 ## 💻 Code Navigation
-1. For **multi_round_adaptive_downsampling**, check **verl/trainer/ppo/ray_trainer.py**
-2. For **GRPO with global statistics**, check **verl/trainer/ppo/core_algos.py**
+1. For ``multi_round_adaptive_downsampling``, check [**verl/trainer/ppo/ray_trainer.py**](verl/trainer/ppo/ray_trainer.py)
+2. For GRPO with global statistics, check [**verl/trainer/ppo/core_algos.py**](verl/trainer/ppo/core_algos.py)
 
 
 ## 🙏 Acknowledgement
