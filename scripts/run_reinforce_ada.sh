@@ -56,6 +56,7 @@ clip_ratio_high=0.28
 multiround_adaptive_downsampling=True
 reinforce_ada_choice="balanced" # "positive_focused" or "balanced"
 global_stat_est=True
+norm_adv_by_std_in_grpo=False
 
 # Training data
 train_path=./data/openr1/train.parquet
@@ -76,6 +77,7 @@ python3 -m verl.trainer.main_ppo \
     algorithm.multiround_adaptive_downsampling=${multiround_adaptive_downsampling} \
     algorithm.reinforce_ada_choice=${reinforce_ada_choice} \
     algorithm.global_stat_est=${global_stat_est} \
+    algorithm.norm_adv_by_std_in_grpo=${norm_adv_by_std_in_grpo} \
     algorithm.adv_estimator=${adv_estimator} \
     algorithm.use_kl_in_reward=${use_kl_in_reward} \
     algorithm.kl_ctrl.kl_coef=${kl_coef} \
