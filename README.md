@@ -2,7 +2,7 @@
 
 # Reinforce-Ada: An Adaptive Sampling Framework for Reinforce-Style LLM Training
 [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2504.11343) 
-[![Github](https://img.shields.io/badge/ReinforceAda-000000?style=for-the-badge&logo=github&logoColor=000&logoColor=white)](https://github.com/RLHFlow/Reinforce-Ada)
+[![Github](https://img.shields.io/badge/Reinforce--Ada-000000?style=for-the-badge&logo=github&logoColor=000&logoColor=white)](https://github.com/RLHFlow/Reinforce-Ada)
 </div>
 
 
