@@ -118,7 +118,7 @@ Our experiments show that Reinforce-Ada consistently improves sample efficiency 
 ## 🧪 Experiment Running
 1. Prepare the training and test datasets
     ```bash
-    # adjust pass_rate to 0.125 and 0.313 for hard and easy prompt selection
+    # adjust pass_rate to 0.125 and 0.313 for hard and easy prompt selection, respectively.
     bash scripts/prepare_data.py 
     ```
 2. Start the training
