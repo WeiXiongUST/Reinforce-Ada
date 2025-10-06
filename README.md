@@ -126,6 +126,7 @@ Our experiments show that Reinforce-Ada consistently improves sample efficiency 
    - ``multiround_adaptive_downsampling=True``: Use adaptive sampling.
    - ``reinforce_ada_choice=balanced``: How to balance the positive and negative prompts, could be one of [balanced, positive-focused].
    - ``global_stat_est=True``: Use global statistics to calculate the mean and std.
+   
    ```bash
    bash scripts/run_reinforce_ada.sh  # Chcek this file for more details
    ```
