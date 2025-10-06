@@ -1,13 +1,13 @@
 <div align="center">
 
 # Reinforce-Ada: An Adaptive Sampling Framework for Reinforce-Style LLM Training
-[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2504.11343) [![Github](https://img.shields.io/badge/ReinforceAda_000000?style=for-the-badge&logo=github&logoColor=000&logoColor=white)](https://github.com/RLHFlow/Reinforce-Ada)
+[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2504.11343) [![Github](https://img.shields.io/badge/RAFT++-000000?style=for-the-badge&logo=github&logoColor=000&logoColor=white)](https://github.com/RLHFlow/Reinforce-Ada)
 </div>
 
 
 
 
-## 📢 Introduction
+## Introduction
 This repository contains the official implementation for Reinforce-Ada, an adaptive sampling framework designed to resolve the ``signal collapse'' problem in Reinforce-style algorithm with group baseline such as GRPO, making training more efficient and effective.
 
 
@@ -83,57 +83,39 @@ Our experiments show that Reinforce-Ada consistently improves sample efficiency 
 | *LLaMA-3.2-3B-instruct* | GRPO | 51.7 | 20.5 | 20.4 | 7.2 | 27.9 |
 | *LLaMA-3.2-3B-instruct* | Reinforce-Ada-pos | 52.6 | 22.2 | 21.0 | 7.5 | 28.8 |
 | *LLaMA-3.2-3B-instruct* | **Reinforce-Ada-balance** | 53.2 | 22.4 | 21.2 | 8.0 | **29.1 (+1.2)** |
+|:---|:---|:---|:---|:---|:---|:---|
+| *Qwen3-4B-instruct* | GRPO | 90.4 | 51.2 | 64.9 | 38.5 | 66.5 |
+| *Qwen3-4B-instruct* | Reinforce-Ada-pos | 91.6 | 50.4 | 66.3 | 38.8 | 67.4 |
+| *Qwen3-4B-instruct* | **Reinforce-Ada-balance** | 91.7 | 53.0 | 65.7 | 38.8 | **67.6 (+1.1)** |
 
 > **Table Notes**: The value `(+X.X)` indicates the improvement in Weighted Average score over the GRPO baseline for each model group.
 **Table 1**:
 > Performance comparison of GRPO and Reinforce-Ada. We report average@32 accuracy with a sampling temperature of 1.0 and a maximum generation length of 4096 tokens. The weighted average score is computed according to the number of prompts in each benchmark. "Hard" indicates training on a more challenging prompt set, with details provided in the paper.
 
 
-## 🌍 Environment Setup
+
+### Structures
+
+
+## Environment Setup
 1. Create a new environment.
    ```bash
-   python -m venv ~/.python/reinforce_ada
-   source ~/.python/reinforce_ada/bin/activate
-
-   # You can also use conda 
-   #conda create -n reinforce_ada python==3.10
-   #conda activate reinforce_ada
+   xx
    ```
 2. Install dependencies
    ```bash
-   pip install pip --upgrade
-   pip install uv
-   python -m uv pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
-   python -m uv pip install flash-attn --no-build-isolation
-   git clone https://github.com/RLHFlow/Reinforce-Ada.git
-   cd ./Reinforce-Ada
-   python -m uv pip install -e .
-   python -m uv pip install vllm==0.10.1
+   xx
    ```
 
-## 🧪 Experiments Running
-1. Prepare the training and test datasets
+## Experiments Running
+1. Prepare the training and test datasets.
     ```bash
-    bash scripts/prepare_data.py  # adjust pass_rate to 0.125 and 0.313 for hard and easy prompt selection
+    xx
     ```
 2. Start the training loop.
    ```bash
-   bash scripts/run_reinforce_ada.sh  # Chcek this file for more details
-   ```
-3. Evaluation
-   ```bash
-   bash scripts/eval_model.sh  # Chcek this file for more details
+   xx
    ```
 
-## 🙏 Acknowledgement
-We thanks [verl](https://github.com/volcengine/verl) for providing the awesome training codebase, and [Qwen2.5-Math](https://github.com/QwenLM/Qwen2.5-Math) for its robust grader.
-
-## 📝 Citation
-If you find our paper and code helpful, feel free to give us a citation.
-```bibtex
-@article{reinforceada,
-  title={Reinforce-Ada: An Adaptive Sampling Framework for Reinforce-Style LLM Training},
-  author={Wei Xiong, Chenlu Ye, Baohao Liao, Hanze Dong, Xinxing Xu, Christof Monz, Jiang Bian, Nan Jiang, Tong Zhang},
-  year={2025}
-}
-```
+## Acknowledgement
+We thanks [verl](https://github.com/volcengine/verl) for providing the awesome codebase!
