@@ -7,7 +7,7 @@
 
 
 
-## Introduction
+## 📢 Introduction
 This repository contains the official implementation for Reinforce-Ada, an adaptive sampling framework designed to resolve the ``signal collapse'' problem in Reinforce-style algorithm with group baseline such as GRPO, making training more efficient and effective.
 
 
@@ -89,29 +89,51 @@ Our experiments show that Reinforce-Ada consistently improves sample efficiency 
 > Performance comparison of GRPO and Reinforce-Ada. We report average@32 accuracy with a sampling temperature of 1.0 and a maximum generation length of 4096 tokens. The weighted average score is computed according to the number of prompts in each benchmark. "Hard" indicates training on a more challenging prompt set, with details provided in the paper.
 
 
-
-### Structures
-
-
-## Environment Setup
+## 🌍 Environment Setup
 1. Create a new environment.
    ```bash
-   xx
+   python -m venv ~/.python/reinforce_ada
+   source ~/.python/reinforce_ada/bin/activate
+
+   # You can also use conda 
+   #conda create -n reinforce_ada python==3.10
+   #conda activate reinforce_ada
    ```
 2. Install dependencies
    ```bash
-   xx
+   pip install pip --upgrade
+   pip install uv
+   python -m uv pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+   python -m uv pip install flash-attn --no-build-isolation
+   git clone https://github.com/RLHFlow/Reinforce-Ada.git
+   cd ./Reinforce-Ada
+   python -m uv pip install -e .
+   python -m uv pip install vllm==0.10.1
    ```
 
-## Experiments Running
-1. Prepare the training and test datasets.
+## 🧪 Experiments Running
+1. Prepare the training and test datasets
     ```bash
-    xx
+    bash scripts/prepare_data.py  # adjust pass_rate to 0.125 and 0.313 for hard and easy prompt selection
     ```
 2. Start the training loop.
    ```bash
-   xx
+   bash scripts/run_reinforce_ada.sh  # Chcek this file for more details
+   ```
+3. Evaluation
+   ```bash
+   bash scripts/eval_model.sh  # Chcek this file for more details
    ```
 
-## Acknowledgement
-We thanks [verl](https://github.com/volcengine/verl) for providing the awesome codebase!
+## 🙏 Acknowledgement
+We thanks [verl](https://github.com/volcengine/verl) for providing the awesome training codebase, and [Qwen2.5-Math](https://github.com/QwenLM/Qwen2.5-Math) for its robust grader.
+
+## 📝 Citation
+If you find our paper and code helpful, feel free to give us a citation.
+```bibtex
+@article{reinforceada,
+  title={Reinforce-Ada: An Adaptive Sampling Framework for Reinforce-Style LLM Training},
+  author={Wei Xiong, Chenlu Ye, Baohao Liao, Hanze Dong, Xinxing Xu, Christof Monz, Jiang Bian, Nan Jiang, Tong Zhang},
+  year={2025}
+}
+```
