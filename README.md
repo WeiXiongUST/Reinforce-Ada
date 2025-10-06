@@ -142,7 +142,7 @@ Our experiments show that Reinforce-Ada consistently improves sample efficiency 
 We thank [verl](https://github.com/volcengine/verl) for providing the awesome training codebase, and [Qwen2.5-Math](https://github.com/QwenLM/Qwen2.5-Math) for its robust grader.
 
 ## 📝 Citation
-If you find our paper and code helpful, feel free to give us a citation.
+If you find our paper or code helpful, feel free to give us a citation.
 ```bibtex
 @article{reinforceada,
   title={Reinforce-Ada: An Adaptive Sampling Framework for Reinforce-Style LLM Training},
